@@ -16,7 +16,7 @@ const navOptionHandler = () => ({
 export const Navigation=()=> {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Login">
+      <Stack.Navigator initialRouteName="Home">
         <Stack.Screen name="Login" component={Login} options={navOptionHandler}/>
         <Stack.Screen name="Home" component={Home} options={navOptionHandler}/>
       </Stack.Navigator>

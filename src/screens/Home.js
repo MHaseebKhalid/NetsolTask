@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 import { View,Text } from 'react-native';
+import {ImageContainer,Header} from '../components';
 
 export const Home=()=>{
     return(
         <View>
-            <Text>Home Page</Text>
+            <Header/>
+            <ImageContainer/>
         </View>
     )
 };
