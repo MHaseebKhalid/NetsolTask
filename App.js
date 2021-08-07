@@ -16,7 +16,8 @@
  } from 'react-native';
  
  import {Navigation} from './src/navigation/Navigation';
- 
+ import { store } from './src/redux/store';
+import { Provider } from 'react-redux';
  const App= () => {
    const isDarkMode = useColorScheme() === 'dark';
  
@@ -25,9 +26,11 @@
    // };
  
    return (
+     <Provider store={store}>
      <SafeAreaView style={{flex:1}}>
       <Navigation/>
      </SafeAreaView>
+     </Provider>
    );
  };
  
