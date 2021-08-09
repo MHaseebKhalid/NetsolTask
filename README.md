@@ -1,6 +1,6 @@
 # NetsolTask
 Download the Code using:
-git clone 
+git clone https://github.com/MHaseebKhalid/NetsolTask.git
 
 
 #### Then:
