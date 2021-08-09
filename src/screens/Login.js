@@ -19,13 +19,7 @@ export  const Login=(props)=>{
     props.navigation.navigate('Home')
   }
 
-//   onClear() {
-//     CookieManager.clearAll(true)
-//       .then((res) => {
-//         this.setState({ token: null })
-//       });
-//   }
- // render() {
+
     return (
       <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
         <TouchableOpacity
@@ -33,28 +27,25 @@ export  const Login=(props)=>{
           onPress={() => instagramLogin.show()}>
           <Text style={{ color: 'white', textAlign: 'center' }}>Login now</Text>
         </TouchableOpacity>
-        {/* <TouchableOpacity
-          style={[styles.btn, { marginTop: 10, backgroundColor: 'green' }]}
-          onPress={() => this.onClear()}>
-          <Text style={{ color: 'white', textAlign: 'center' }}>Logout</Text>
-        </TouchableOpacity> */}
+       
         <Text style={{ margin: 10 }}>Token: {token}</Text>
-        {/* {this.state.failure && (
-          <View>
-            <Text style={{ margin: 10 }}>
-              failure: {JSON.stringify(this.state.failure)}
-            </Text>
-          </View>
-        )} */}
+        
         <InstagramLogin
           ref={ref => (instagramLogin = ref)}
-          appId='348584610229985'
-          appSecret='087354ca1e752480a0148fbb8371f6a8'
+          // i have use multiple appId adn AppSecret because during test the limit was exceeding
+          // appId='960248034772059'
+          // appSecret='af4442ff1f837e83e9bff3d6c4505dc6'
+          appId='355710592684489'
+          appSecret='ce4f181a6e548b7512cdb10e8abff364'
+          // appId='2232259123582765'
+          // appSecret='2358a5a890a5f69a84ed344cbef26f2f'
+          //  appId='348584610229985'
+          // appSecret='087354ca1e752480a0148fbb8371f6a8'
           redirectUrl='https://haseebkhalid.netlify.app/'
           scopes={['user_profile', 'user_media']}
           onLoginSuccess={setIgToken}
           onLoginFailure={(data) => console.log(data)}
-          language='tr' //default is 'en' for english
+          language='en' //default is 'en' for english
         />
       </View>
     );
